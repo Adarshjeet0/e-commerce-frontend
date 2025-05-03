@@ -25,7 +25,7 @@ function AuthRegister() {
         toast({
           title: data?.payload?.message,
         });
-        navigate("/auth/login");
+        navigate("/e-commerce-frontend/auth/login");
       } else {
         toast({
           title: data?.payload?.message,
@@ -47,7 +47,7 @@ function AuthRegister() {
           Already have an account
           <Link
             className="font-medium ml-2 text-primary hover:underline"
-            to="/auth/login"
+            to="/e-commerce-frontend/auth/login"
           >
             Login
           </Link>

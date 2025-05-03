@@ -37,7 +37,7 @@ function UserCartWrapper({ cartItems, setOpenCartSheet }) {
       </div>
       <Button
         onClick={() => {
-          navigate("/shop/checkout");
+          navigate("/e-commerce-frontend/shop/checkout");
           setOpenCartSheet(false);
         }}
         className="w-full mt-6"
