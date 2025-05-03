@@ -5,7 +5,7 @@ function CheckAuth({ isAuthenticated, user, children }) {
 
   console.log(location.pathname, isAuthenticated);
 
-  if (location.pathname === "/") {
+  if (location.pathname === "/e-commerce-frontend") {
     if (!isAuthenticated) {
       return <Navigate to="/auth/login" />;
     } else {
