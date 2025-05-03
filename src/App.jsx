@@ -41,7 +41,7 @@ function App() {
     <div className="flex flex-col overflow-hidden bg-white">
       <Routes>
         <Route
-          path="/"
+          path="/e-commerce-frontend"
           element={
             <CheckAuth
               isAuthenticated={isAuthenticated}
