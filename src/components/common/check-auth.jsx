@@ -7,12 +7,12 @@ function CheckAuth({ isAuthenticated, user, children }) {
 
   if (location.pathname === "/e-commerce-frontend") {
     if (!isAuthenticated) {
-      return <Navigate to="/auth/login" />;
+      return <Navigate to="/e-commerce-frontend/auth/login" />;
     } else {
       if (user?.role === "admin") {
-        return <Navigate to="/admin/dashboard" />;
+        return <Navigate to="/e-commerce-frontend/admin/dashboard" />;
       } else {
-        return <Navigate to="/shop/home" />;
+        return <Navigate to="/e-commerce-frontend/shop/home" />;
       }
     }
   }
@@ -24,7 +24,7 @@ function CheckAuth({ isAuthenticated, user, children }) {
       location.pathname.includes("/register")
     )
   ) {
-    return <Navigate to="/auth/login" />;
+    return <Navigate to="/e-commerce-frontend/auth/login" />;
   }
 
   if (
@@ -33,9 +33,9 @@ function CheckAuth({ isAuthenticated, user, children }) {
       location.pathname.includes("/register"))
   ) {
     if (user?.role === "admin") {
-      return <Navigate to="/admin/dashboard" />;
+      return <Navigate to="/e-commerce-frontend/admin/dashboard" />;
     } else {
-      return <Navigate to="/shop/home" />;
+      return <Navigate to="/e-commerce-frontend/shop/home" />;
     }
   }
 
@@ -44,7 +44,7 @@ function CheckAuth({ isAuthenticated, user, children }) {
     user?.role !== "admin" &&
     location.pathname.includes("admin")
   ) {
-    return <Navigate to="/unauth-page" />;
+    return <Navigate to="/e-commerce-frontend/unauth-page" />;
   }
 
   if (
@@ -52,7 +52,7 @@ function CheckAuth({ isAuthenticated, user, children }) {
     user?.role === "admin" &&
     location.pathname.includes("shop")
   ) {
-    return <Navigate to="/admin/dashboard" />;
+    return <Navigate to="/e-commerce-frontend/admin/dashboard" />;
   }
 
   return <>{children}</>;
